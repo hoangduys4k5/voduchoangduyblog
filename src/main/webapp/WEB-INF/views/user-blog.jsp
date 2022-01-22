@@ -57,11 +57,28 @@
 			
 					<article class="templatemo-item">
 					<h2>${blog.title}</h2>
-					<img src="../resources/images/${blog.image}" width="50px" height="40px" alt="Gutman Island" class="img-thumbnail">
+					<img src="../resources/images/${blog.image}" alt="Gutman Island" class="img-thumbnail">
 					<h4>${blog.content}</h4>															
 					<!-- <a href="#" class="btn btn-warning">Buy</a>			 -->
 				</article><hr>
-						
+						 <div class="card-body">
+							  <c:forEach var="cmt" items="${blog.comments}">
+							 <p><strong>user: </strong>${cmt.cmt}</p>
+									
+									</c:forEach> 
+	  </div>
+						 <div class="card-body">
+	    <form:form method="POST" action="comment">
+			<div class="form-group">
+		  	<input type="hidden" name="id" value="${blog.id}"/>
+	  		</div>
+	    	<div class="form-group">
+		    <label for="exampleFormControlTextarea1">Bình luận</label>
+		    <textarea class="form-control" name="comment"  rows="3"></textarea>
+	  		</div>
+	  		<button type="submit" class="btn btn-primary mb-2">Gửi</button>
+	    </form:form>
+	  </div>
 				<footer>
 					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-copyright">Copyright &copy; 2084 Your Company Name <!-- Credit: www.templatemo.com --></p>
 					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-social">

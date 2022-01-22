@@ -91,5 +91,13 @@ public class UserController {
 		theBlogs.setComments(commentService.findAllByBlog(theBlogs));
 		theModel.addAttribute("blog", theBlogs);
 		return "user-blog";
+		
+	}
+	@GetMapping("/category")
+	public String category(@RequestParam("blogId") int theId, Model theModel) {
+		Blog theBlog = blogService.findById(theId);
+		theBlog.setComments(commentService.findAllByBlog(theBlog));
+		theModel.addAttribute("blog",theBlog);
+		return "user-blog";
 	}
 }

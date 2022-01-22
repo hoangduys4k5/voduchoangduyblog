@@ -20,7 +20,7 @@
 				Example - Customer Management</h3>
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<div class="panel-title">Add Customer</div>
+					<div class="panel-title">Add Blog</div>
 				</div>
 				<div class="panel-body">
 					<form:form method="POST" action="saveBlog" enctype="multipart/form-data"

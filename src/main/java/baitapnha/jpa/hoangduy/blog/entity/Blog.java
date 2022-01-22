@@ -36,7 +36,7 @@ public class Blog {
 	@Column(name="image")
 	private String image;
 	
-	@OneToMany(mappedBy = "blog")
+	@OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
     private List<Comment> comments;
 	
 	@ManyToOne

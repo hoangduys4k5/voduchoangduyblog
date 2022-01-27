@@ -40,7 +40,7 @@ public class TagNameController {
 		return "tagname-form";
 	}
 
-	@PostMapping("/savetagname")
+	@PostMapping("/saveTagname")
 	public String savetagname(@Valid @ModelAttribute("tagname") TagName thetagname,
 			BindingResult theBindingResult,Model theModel) {
 		if (theBindingResult.hasErrors()) {

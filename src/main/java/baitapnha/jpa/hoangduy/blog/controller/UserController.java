@@ -24,7 +24,7 @@ import baitapnha.jpa.hoangduy.blog.service.define.BaseService;
 import baitapnha.jpa.hoangduy.blog.service.define.PageService;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping({"/","/user"})
 public class UserController {
 	@Autowired
 	private PageService<Blog> blogService;
